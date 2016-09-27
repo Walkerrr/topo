@@ -1,0 +1,123 @@
+
+#header {    height: 120px; }
+#header .mid{    margin-left: 0px ;  margin-top:60px ; }
+
+#main {_zoom:1;font-family:"微软雅黑";}
+#top-main {position:relative;overflow:hidden;height:480px;
+                     border-bottom:1px solid #E5E5E5; background: url('/img/top_banner_bg.png') repeat-x;}
+#top-main .orange-btn {font-family:"微软雅黑";display:inline-block; width:100%; height:45px; 
+                     line-height:45px; text-align:center; font-size:18px; color:#fff; background:url('/image/index/btn_bg_1.jpg') repeat-x;}
+#top-main .orange-btn:hover {background-position:0 -45px;}
+
+/*左侧滑动区的高宽设置*/
+#top-main .left-banner {*overflow:hidden;}
+#top-main .left-banner li {position:absolute;width:600px;height:400px;left:0;top:0;padding-top:15px;}
+#top-main .left-banner li img {width:600px;margin-left:0px;height:400px;}
+
+/*控制区的位置及大小设置*/
+#top-main .controller {position:absolute;width:120px;height:20px;top:420px;left:270px;}
+#top-main .controller li {cursor:pointer;background:#abc;float:left;width:22px;height:20px;
+                                             background:url('/img/dot.png') 4px 0 no-repeat;}
+#top-main .controller li.current{background-position:5px -20px;}
+#top-main .controller li:hover {position:relative;top:1px;}
+
+/*用户登陆区域样式*/
+#top-main .right-account {float:right; position:relative;}
+#top-main .right-user {float:right;position:relative;margin-top:30px;}
+
+#top-main .user-box {width:350px; height:380px;z-index:2;font-family:"微软雅黑";background:url('/image/index/opacity_50.png') repeat;}
+#top-main .user-box h2 {text-align:center;padding-top:33px;color:#73b76c;font-size:24px;font-weight:normal;}
+#top-main .user-box .des {margin-left:40px;font-size:14px; color:#808080; margin-top:56px;}
+#top-main .user-box .username  {margin-left:40px; margin-top:20px;}
+#top-main .user-box .username a {color:#5dad55;font-size:14px;}
+#top-main .user-box .btn-box {margin:45px 30px 45px 30px;}
+#top-main .user-box .login-out {text-align:right;margin-right:31px;margin-top:12px;}
+#top-main .user-box .login-out a{font-size:14px;color:#808080;}
+#top-main .user-box .login-out a:hover {text-decoration:underline;}
+
+#top-main .register-box {background:url('/image/index/opacity_80.png') repeat;width:350px; height:159px; border-top:1px solid #93cdd8;}
+#top-main .register-box .des {margin:25px 27px 0 27px; color:#67b55e;font-size:16px;line-height:1.2;font-family:"微软雅黑";}
+#top-main .register-box .des .strong{float:left;font-size:42px;font-weight:bold;line-height:1;}
+#top-main .register-box .img_des {margin:25px 0 0 27px;height:38px;}
+#top-main .register-box .reg-btn-box {margin:27px 27px 0 27px;}
+
+/* 登录输入区的样式*/
+#top-main .login-box {background:url('/image/index/opacity_50.png') repeat;
+                                         margin-top:38px; width:350px; height:392px;  z-index:2;color:#808080;}
+#top-main .login-box a {color:#808080;}
+#top-main .login-box a:hover {text-decoration:underline;}
+
+#top-main .login-box .msg{color:#ff8531;margin-top:6px;line-height:1.5;font-size:14px;}
+#top-main .login-box h3 {color:#73b76c; font-size:18px; padding-top:28px;font-weight:normal;}
+
+/*登录窗体中输入控件的样式*/
+#top-main .login-box .text {border-radius:2px;box-shadow:inset 0 1px 3px -1px rgba(0,0,0,0.4);font-family:tahoma,arial;
+                                           padding-top:10px;padding-bottom:10px;border:0 none transparent;background:#fff;color:#333;font-size:16px;
+										   padding-left:10px;width:299px;}
+#top-main .login-box .text:hover {border-radius:2px;box-shadow:inset 0 1px 3px -1px rgba(0,0,0,0.4);}
+#top-main .login-box .text:focus {border-radius:2px;box-shadow:0 0 3px rgba(86,180,289,0.7), inset 0 1px 3px -1px rgba(0,0,0,0.4);}
+
+/*登录窗体中checkbox控件的样式*/
+#top-main .login-box .checkbox {cursor:pointer;margin-right:5px;display:inline-block;height:16px;width:16px;
+                                                             background:url('/img/checkbox.png') 0 0 no-repeat;}
+body #top-main .login-box .checked {background-position:0 -32px;}
+
+/*设置登录按钮的样式*/
+#top-main .login-box .login-btn input {
+    border:0 none transparent;
+	font-family:"微软雅黑";
+	cursor:pointer;
+	display:inline-block;
+    font-size:20px; 
+	color:#327b38; 
+	text-align:center; 
+	line-height:44px; 
+	width:299px; 
+	height:48px; 
+	color:#327b38;
+	background:url('/img/login_btn_bg.jpg') repeat-x;
+}
+#top-main .login-box .login-btn input.hover {background-position:0 -50px;}
+
+
+#top-main .login-box h4 {color:#837f7f;font-size:14px;font-weight:normal;margin-top:10px;}
+#top-main .login-box .sp {height:1px solid #000;}
+#top-main .sp {background:url('/img/login_sp.jpg') no-repeat top center; border:0 none transparent;padding-top:1px;margin-top:20px;}
+
+
+/*多图标显示控制技术*/
+#top-main .login-box .other-login {margin-left:22px;}
+#top-main .login-box .other-login a {margin-left:1px; width:91px; height:36px; display:inline-block;
+                                             background:url('/img/open_login.png') repeat-x; margin-top:15px;}
+#top-main .login-box .other-login .other-sina {background-position:0 0;}
+#top-main .login-box .other-login .other-sina:hover {background-position:0 -40px;}
+#top-main .login-box .other-login .other-qq {background-position:0 -80px;}
+#top-main .login-box .other-login .other-qq:hover {background-position:0 -120px;}
+#top-main .login-box .other-login .other-xiaomi {background-position:0 -160px;}
+#top-main .login-box .other-login .other-xiaomi:hover {background-position:0 -200px;}
+
+
+#kpdes {overflow:hidden;}
+#kpdes .bg-1 {background: url('/img/banner_bg_1.jpg') repeat-x;}
+#kpdes .bg-2 {background: url('/img/banner_bg_2.jpg') repeat-x;}
+#kpdes .bg-3 {background: url('/img/banner_bg_3.jpg') repeat-x;}
+#kpdes .bg-4 {background: url('/img/banner_bg_4.jpg') repeat-x;}
+#kpdes li {text-align:center; height:240px; margin-bottom:20px; margin-top:-330px;}
+
+
+#top-slide {text-align:center;background:#f6f5f5; padding-top:10px; padding-bottom:7px;}
+
+
+.placeholder {margin-left:10px;color:#999;}
+#user-username_placeholder {margin-top:12px;}
+#user-password_placeholder {margin-top:18px;}
+.c80 {color:808080;}
+
+/*ie兼容*/
+#top-main .left-banner {_overflow:hidden;}
+#top-main .left-banner .dn {_display:block;}
+#top-slide,#kpdes {*display:none;}
+#download {_background:#efefef;zoom:1;}
+#top-main .register-box {_background:url('/image/index/opacity_50.png') repeat;_background:#f0f0f0;}
+body #download .download-list li a:hover {_color:#333;}
+a:focus{outline:none;}

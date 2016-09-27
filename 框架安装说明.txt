@@ -1,0 +1,55 @@
+
+修改配置：
+第一种情况（推荐）：框架文件checkout到本机的WWW根目录下
+  假定WWW根目录为:D:/wamp/www
+  则修改如下：
+
+1 修改tpss_conf.php
+  修改文件开始几行的
+        修改前                                            修改后
+  $gRootDir = "D:/ProgTools/WWW";          =>    $gRootDir = "D:/wamp/www"
+  ##定义网站根目录
+  define("G_ROOT_DIR","D:/ProgTools/WWW"); =>    define("G_ROOT_DIR","D:/wamp/www"); 
+  
+  修改数据库全局设置为本机数据库用户和口令
+  主要修改
+  define("G_DB_NAME","tpss");              =>    define("G_DB_NAME","yourdb");
+  define("G_DB_USER","devuser");           =>    define("G_DB_USER","yourname");  
+  define("G_DB_PASSWORD","");              =>    define("G_DB_PASSWORD","yourpwd");
+
+
+2 修改log_conf.xml
+  第7行
+		<param name="file" value="D:/ProgTools/WWW/log/tpsslog.%s.txt" />
+        修改后
+		<param name="file" value="D:/wamp/www/log/tpsslog.%s.txt" />
+  第14行
+		<param name="file" value="D:/ProgTools/WWW/log/tpssdb.%s.txt" />
+         修改后
+		<param name="file" value="D:/wamp/www/log/tpssdb.%s.txt" />
+
+
+3 修改index.html，将函数loginSuccess中的
+  window.location修改为你自己的html地址
+
+第二种情况：
+  不是checkout在www根目录，而是该目录下的其他子目录，如demo子目录，
+  则需要修改index.html文件中的"/tpss/ajax.php"为"/demo/tpss/ajax.php"
+
+
+样例使用
+在class\tpss\dao目录下有t_demo.sql用于创建样例表
+
+通过浏览器访问：
+127.0.0.1/tpss/ajax.php?c=DemoCtrl&a=demo&name=citc&hellomsg=你的明天会更好
+用于测试样例控制类DemoCtrl(位于class\tpss\ui目录下)的demoAction的使用，调用了DemoLogic类(位于class\tpss\comm目录下)的方法
+
+通过浏览器访问：
+127.0.0.1/tpss/ajax.php?c=DemoCtrl&a=addRec&keyfield=A2&field1=B2&field2=C2
+用于测试样例类调用数据库操作类DaoDemo(位于class\tpss\dao目录下)增加数据库记录的使用
+
+
+通过浏览器访问：
+127.0.0.1/tpss/ajax.php?c=DemoCtrl&a=queryRec&keyfield=A2
+用于测试样例类调用数据库操作类DaoDemo(位于class\tpss\dao目录下)查询加数据库记录的使用
+

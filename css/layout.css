@@ -1,0 +1,99 @@
+/*页面整体设置，包括最低宽度要求*/
+html {min-width:1280px;min-height:800px;}
+body {background:#fff;line-height:1.2;background:#f7f7f7;}
+
+/*标题栏区域*/
+#header {
+    height: 80px; 
+	line-height:46px;
+	overflow:hidden;
+	font-family:"微软雅黑";
+	position:relative;
+	margin-top:0px;
+	background:url('/img/top_banner_bg.png');
+	background-position:0 -320px;
+}
+
+/*标题栏的系统名称区*/
+#header h1 {
+    float:left; 
+	font-size:18px;
+	line-height:1;
+    display:inline-block; 
+	height:36px;
+	background:url('/img/citc-uni-logo.jpg') no-repeat;	
+	width:630px;
+	margin-top:0px;
+	margin-left:0px
+}
+
+#header h1  span {
+    display:block;
+    margin-top:12px;
+    margin-left:250px;
+    width:300px;
+	font-size:20px;
+    color:#F88;
+ }
+
+#header  #userbox {
+    display:block;
+    margin-top:5px;
+    margin-left:660px;
+    width:300px;
+    line-height:26px;
+	font-size:14px;
+    color:#88F;
+ }
+
+/*标题栏的顶层菜单区*/
+#header .top-menu {
+    float:right; 
+	margin-right:-10px;
+}
+
+#header .top-menu .arrow {
+    display:none;
+	position:absolute;
+	width:21px;
+	height:14px;
+	background:url('/img/top_arrow.jpg') no-repeat;
+	bottom:-7px;
+	left:50%;
+	margin-left:-10px;
+}
+
+#header .top-menu li {float:left; position:relative;}
+#header .top-menu li a {line-height:30px; display:inline-block; padding:0 18px;color:#6f6f6f;font-size:16px;}
+#header .top-menu li.select a {color:#6fb169;}
+
+#header .top-menu a:hover .arrow {display:block;}
+#header .top-menu li.select .arrow{display:block;}
+#header .top-menu a:hover {color:#6fb169;}
+
+
+#main {background:#fff;}
+
+#container {font-family:"微软雅黑";height:564px;padding-top:8px;}
+
+/*页脚区*/
+#footer {font-family:"微软雅黑";border-top:1px solid #ebeaea;}
+#footer .top-footer {border-bottom:1px solid #f0f0f0;padding-bottom:5px;background:#f9f9f9;}
+#footer .more {float:left;margin-top:10px;}
+#footer .more li {float:left;padding:0 40px;border-right:1px solid #e9e9e9;height:20px;}
+#footer .more li.last {border-right:0 none transparent;}
+#footer .more dt {font-size:12px;color:#696969;margin-bottom:5px;}
+#footer .more dd {font-size:12px;margin-bottom:10px;}
+#footer .more dd a {color:#696969;}
+#footer .more dd a:hover {text-decoration:underline;}
+
+/*版权声明区*/
+#footer .copyright, #footer .copyright a {
+    padding-top:18px;
+	padding-bottom:18px;
+	background:#fdfdfd;
+	text-align:center;
+	color:#99F;
+}
+
+

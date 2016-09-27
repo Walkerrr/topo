@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>本地网传输规划支撑系统(TPSS)-V1.0</title>
+	<meta content="Copyright (c) 中讯设计" name="copyright">
+    <meta name="keywords" content="本地网，传输，规划">
+    <meta name="description" content="本地网传输规划支撑系统是服务传输规划人员的辅助和分析工具。">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/layout.css">	
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+
+	<!--Js-->
+	<script type="text/javascript" src="/jslib/jquery-easyui-1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="/jslib/jquery-easyui-1.4.2/jquery.placeholder-1.1.9.js"></script>
+
+</head>
+<body>
+<!--Header-->
+<div id="header">
+	<div class="mid w960">
+		<h1><span>本地网传输与宽带规划支撑系统</span></h1>	
+	</div>
+</div>
+<!--header end-->
+    
+<!--Content-->
+
+<div id="main">
+	<div id="top-main">
+		<div class="mid w960 clearfix pr">
+			<ul class="left-banner">
+				<li style="left: 0px; opacity: 0.8;"><img src="/img/slideB-1.jpg"></li>
+			</ul>
+
+
+			<div id="account-box" class="right-account">
+				<div class="login-box">
+						<form method="post" action="" onsubmit="return false;" id="login-form">
+					    <div class="ml26">
+						<h3>登录系统：</h3>
+							<p id="loginmsg" class="msg">如有错误&nbsp;请瞧这儿</p>
+							<input type="text" name="username" id="user-username" class="text" placeholder="本地网编码或省分两位编码">
+							<input type="password" name="password" id="user-password" class="text mt6" placeholder="密码">
+							<div class="fr mr26">
+							    <a iname="main-forgot" class="c80" href="/resetPassword.php">忘记密码？</a>
+							</div>
+						</div>
+						<div class="login-btn mt35 ml26">
+							<input id="loginbtn" iname="login" type="submit" value="" class="" onclick="login()">
+						</div>
+						</form>
+				</div>
+			</div>
+			<div class="right-user dn">
+				<div class="user-box">
+					<h2>欢迎使用传输规划系统</h2>	
+					<p class="des">您正在使用的系统账号为：</p>
+					<p class="username"></p>
+					<div class="btn-box">
+						<a iname="main-comein" href="##" onclick="loginSuccess()" class="orange-btn">进入我的规划</a>	
+					</div>
+					<p class="login-out"><a iname="main-logout" href="#" onclick="logout()">退出账号</a></p>
+				</div>
+			</div>
+		</div>
+	</div><!--main end-->
+</div><!--main end-->
+<!--Header-->
+
+<div id="footer">
+	<div class="copyright">
+		<p>© 2015 CITC All Rights Reserved 中讯邮电咨询设计院有限公司</p>
+	</div>
+</div>
+
+
+<script>
+
+
+$('#login-form .login-btn input').hover(function(e){
+	if('mouseenter' == e.type) {
+		$(this).addClass('hover');	
+	}else{
+		$(this).removeClass('hover');	
+	}
+});
+
+$('#login-form .checkbox').parent().click(function(){
+	$(this).find('.checkbox').toggleClass('checked');	
+})
+
+//placeholder
+$("input[type='text'], input[type='password']").placeholder();
+
+function login()
+{
+    //loginSuccess();
+	//return;
+    var userName = $("#user-username").val();
+    var passWord = $("#user-password").val();
+
+
+    $("#loginmsg").html("正在登录....");
+	$("#loginbtn").attr("disabled","disabled");
+
+	$.post("/tpss/ajax.php",
+	    {c:"Login",
+		 a:"login",
+		 MFR:"1",
+		 username:userName,
+		 password:passWord
+		},
+	    function(data){
+			$("#loginmsg").html(data.message);
+
+			if(true==data.status)
+			{
+			    loginSuccess();
+			}
+			else
+			{
+				$("#loginbtn").removeAttr("disabled");
+			}
+		},
+		"json"
+	);
+    
+}
+
+//登出系统
+function logout() {
+    $.post("/tpss/ajax.php?c=Login&a=logout&MFR=1",{},
+      function(data)
+	  {
+			if(true==data.status)
+			{
+				$(".right-account").removeClass("dn");
+				$(".right-user").addClass("dn");
+				
+			}
+	
+    
+    },"json");
+
+
+}
+
+//登录初始化
+function loginSuccess() {
+	window.location = '/tpss/Demo.html';
+}
+
+//$('#login-form').login({success:loginSuccess});
+
+$.post("/tpss/ajax.php?c=Login&a=status&MFR=1",{},
+    function(data)
+	{
+			if(true==data.status)
+			{
+			    //loginSuccess();
+				$(".right-account").addClass("dn");
+				$(".right-user").removeClass("dn");
+				$(".username").html(data.data.fullname);
+			}
+	
+    
+    },"json");
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+#header {    height: 74px;}
+#header-right  {top:0px;display:inline-block;} 
+
+/*退出登录系统的按钮颜色*/
+#header  a {    color:#88F; }
+
+#main {_zoom:1;font-family:"微软雅黑";}
+#top-main {
+    position:relative;overflow:hidden;height:560px;
+    border-bottom:1px solid #E5E5E5; background: url('/img/top_banner_bg.png') repeat-x;
+}
+
+
+#nav-tree {    height: 560px;}
+
+#sub-menu {    height: 68px;}
+					 
+/*列表图标的控制显示*/
+#toolbar {border-top:1px solid #e5e5e5;border-bottom:1px solid #e5e5e5;margin-bottom:-1px; 
+               height:66px;	overflow:hidden;  }
+#toolbar .toolbar-list {margin:2px auto; width:100%; background:#EFF; height:64px;}
+#toolbar .toolbar-list li {height:64px; float:left; width:65px; border-right:1px solid #EAE8E8; text-align:center;}
+#toolbar .toolbar-list li.last {border-right:0 none transparent;}
+
+#toolbar .toolbar-list li a {margin-bottom:0px;margin-top:0px;height:32px;padding-top:44px;font-size:14px; 
+                                                 display:inline-block; width:66px; background:url('/img/iconlist.png') no-repeat;color:#8a8a8a;}
+
+#toolbar .toolbar-list .ico-pc a {background-position:center 5px;}
+#toolbar .toolbar-list .ico-mac a {background-position:center -100px;}
+#toolbar .toolbar-list .ico-android a {background-position:center -195px;}
+#toolbar .toolbar-list .ico-iphone a {background-position:center -295px;}
+#toolbar .toolbar-list .ico-ipad a {background-position:center -395px;}
+#toolbar .toolbar-list .ico-wechat a {background-position:center -500px;}
+#toolbar .toolbar-list .ico-linux a {background-position:center -600px;}
+#toolbar .toolbar-list .ico-winphone a {background-position:center -700px;}
+#toolbar .toolbar-list .ico-win8 a {background-position:center -800px;}
+
+#toolbar .toolbar-list li a:hover {background-color:#efefef;width:64px; margin-left:-1px;margin-right:-1px;}
+#toolbar .toolbar-list li.select  a{background-color:#feefef;}
+
+					 
+					 
+					 
+#top-main .orange-btn {font-family:"微软雅黑";display:inline-block; width:100%; height:45px; 
+                     line-height:45px; text-align:center; font-size:18px; color:#fff; background:url('/image/index/btn_bg_1.jpg') repeat-x;}
+#top-main .orange-btn:hover {background-position:0 -45px;}
+
+
+/*多图标显示控制技术*/
+#top-main .login-box .other-login {margin-left:22px;}
+#top-main .login-box .other-login a {margin-left:1px; width:91px; height:36px; display:inline-block;
+                                             background:url('/img/open_login.png') repeat-x; margin-top:15px;}
+#top-main .login-box .other-login .other-sina {background-position:0 0;}
+#top-main .login-box .other-login .other-sina:hover {background-position:0 -40px;}
+#top-main .login-box .other-login .other-qq {background-position:0 -80px;}
+#top-main .login-box .other-login .other-qq:hover {background-position:0 -120px;}
+#top-main .login-box .other-login .other-xiaomi {background-position:0 -160px;}
+#top-main .login-box .other-login .other-xiaomi:hover {background-position:0 -200px;}
+
+
+#kpdes {overflow:hidden;}
+#kpdes .bg-1 {background: url('/img/banner_bg_1.jpg') repeat-x;}
+#kpdes .bg-2 {background: url('/img/banner_bg_2.jpg') repeat-x;}
+#kpdes .bg-3 {background: url('/img/banner_bg_3.jpg') repeat-x;}
+#kpdes .bg-4 {background: url('/img/banner_bg_4.jpg') repeat-x;}
+#kpdes li {text-align:center; height:240px; margin-bottom:20px; margin-top:-330px;}
+
+
+#top-slide {text-align:center;background:#f6f5f5; padding-top:10px; padding-bottom:7px;}
+
+/*更多介绍展开区域的样式*/
+#main .more  {display:inline-block; width:152px; height:28px; background:url('/img/more.png') no-repeat;}
+#main .more:hover {background-position:0 -30px; no-repeat;}
+#bottom-slide {text-align:center;background:#fcfbfb; padding-top:10px; padding-bottom:7px;}
+#main .less {display:inline-block; width:152px; height:28px; background:url('/img/more.png') 0 -60px no-repeat;}
+#main .less:hover {background-position:0 -90px; no-repeat;}
+
+
+.placeholder {margin-left:10px;color:#999;}
+#user-username_placeholder {margin-top:12px;}
+#user-password_placeholder {margin-top:18px;}
+.c80 {color:808080;}
+
+/*ie兼容*/
+#top-main .left-banner {_overflow:hidden;}
+#top-main .left-banner .dn {_display:block;}
+#top-slide,#kpdes {*display:none;}
+#toolbar {_background:#efefef;zoom:1;}
+#top-main .register-box {_background:url('/image/index/opacity_50.png') repeat;_background:#f0f0f0;}
+body #toolbar .toolbar-list li a:hover {_color:#333;}
+a:focus{outline:none;}
+
+
+
+@media screen and (min-width: 1025px) {
+	body, span {
+		font-size:14px;
+	}
+}
+@media screen and (min-width: 1367px) {
+	body, span {
+		font-size:16px;
+	}
+	#container {
+		//width: 90%;
+	}
+}
+@media screen and (min-width: 1601px) {
+	body, span {
+		font-size:18px;
+	}
+	#container {
+		//width: 90%;
+	}
+}
+
+div {
+	box-sizing: border-box;
+}
+
+/* ~~ 此容器包含其它 div ~~ */
+#container {
+	//background-color: #ffffff;
+	padding:0;
+	margin:0 auto; /* 侧边的自动值与宽度结合使用，可以将布局居中对齐 */
+	//position: absolute;
+	width: 100%;
+	height: 100%;
+	min-width:960px;
+}

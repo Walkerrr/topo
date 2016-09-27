@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/* 重置常用html元素边框间隔为0 */
+body, p, h1, h2, h3, h4, h5, h6, ul, li, ol, dl, dt, dd, form{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*html列表元素默认无列表样式*/
+li, dt, dd{
+    list-style: none;
+}
+
+/*图片默认无边*/
+img {
+    border: none;
+}
+
+/*热点链接无下划线，颜色灰*/
+a {
+    text-decoration: none;
+    color: #444;
+}
+
+/*页面背景亮白，字体默认12像素*/
+body{
+    background-color: #f6f6f6;
+    font: 12px/1.5 tahoma,arial,"宋体";
+}
+
+
+.dib{
+    display:inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+.clearfix{
+    *zoom: 1;
+}
+
+.clearfix:after{
+    content: '\200B';
+    display: block;
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    visibility: hidden;
+    clear: both;
+}
+
+.mid{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.center{
+    margin: 0 auto;
+}
+/*隐藏样式*/
+.dn{
+    display: none;
+}
+
+/*浮动位置*/
+.fl {    float: left;      }
+.fr {    float: right;  }
+.fn{    float: none;  }
+
+/* 宽度 */
+.w20  {     width: 20px;    }
+.w46  {     width: 46px;    }
+.w150{     width: 150px;  }
+.w280{     width: 280px;  }
+.w560{     width: 560px;  }
+.w960{     width: 960px;  }
+.wf     {     width: 100%;   }
+
+/* 高度*/
+.h100 {     height:100px;}
+.h200 {     height:200px;}
+.h400 {     height:400px;}
+
+/* 外上边距 */
+.mt5    {    margin-top:5px;     }
+.mt6    {    margin-top:6px;     }
+.mt10  {    margin-top:10px;  }
+.mt12  {    margin-top: 12px; }
+.mt13  {    margin-top: 13px; }
+.mt15  {    margin-top:15px;  }
+.mt17  {    margin-top: 17px; }
+.mt20  {    margin-top:20px; }
+.mt30  {    margin-top:30px;  }
+.mt35  {    margin-top:35px;  }
+.mt_5   {    margin-top:-5px;  }
+
+
+/* 外底边距 */
+.mb0   {    margin-bottom:0         }
+.mb5   {    margin-bottom:5px;    }
+.mb10 {    margin-bottom:10px; }
+.mb20 {    margin-bottom:20px; }
+.mb30 {    margin-bottom:30px; }
+.mb28 {    margin-bottom:28px;}
+.mb40 {    margin-bottom:40px; }
+
+/* 外左边距 */
+.ml2    {    margin-left:2px;     }
+.ml5    {    margin-left:5px;     }
+.ml15  {    margin-left: 15px;  }
+.ml20  {    margin-left:20px;   }
+.ml26  {    margin-left:26px;   }
+.ml280  {    margin-left:280px;   }
+.ml_8  {    margin-left: -8px;   }
+
+
+/* 外右边距 */
+.mr2   {    margin-right:2px;   }
+.mr3   {    margin-right:3px;   }
+.mr5   {    margin-right: 5px;  }
+.mr10 {    margin-right:10px; }
+.mr15 {    margin-right:15px; }
+.mr20 {    margin-right: 20px;}
+.mr26 {    margin-right:26px; }
+.mr30 {    margin-right:30px; }
+
+
+/* 内边距 */
+.pd0  {    padding: 0px;   }
+.pd5  {    padding: 5px;   }
+.pd10{    padding: 10px; }
+.pd20{    padding: 20px; }
+.pd30{    padding: 30px; }
+
+
+/* 位置类型 */
+.pr { position: relative;    }
+.pa { position: absolute; }
+
+
+.vt {vertical-align:top;}
+
+/* 调试用途*/
+.design {border:solid 1px #F00;}
+.red {border-color: #F00;}
+.green {border-color: #0F0;}
+.blue {border-color: #00F;}
+.black {border-color: #000;}
+
+
+/*左侧导航菜单的样式*/
+.menu_list{margin:0px;width:100%;align:center;}
+.menu_head{width:100%;height:40px;line-height:40px;padding-left:38px;
+           font-size:14px;color:#525252;cursor:pointer;border:1px solid #e1e1e1;
+		   position:relative;font-weight:normal;
+		   background:#f1f1f1 url(/css/images/pro_left.png) center left no-repeat;margin:0;}
+.menu_list .current{background:#a0e0ff url(/css/images/pro_down.png) center left no-repeat;}
+.menu_body{width:100%;height:auto;overflow:hidden;line-height:35px;
+           border-left:1px solid #e1e1e1;backguound:#fff;border-right:1px solid #e1e1e1;}
+.menu_body a{display:block;width:100%;height:35px;line-height:35px;
+           padding-left:38px;color:#777777;background:#fff;text-decoration:none;
+		   border-bottom:1px solid #e1e1e1;}
+.menu_body a:hover{text-decoration:none;} 

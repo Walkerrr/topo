@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<log4php:configuration xmlns:log4php="http://logging.apache.org/log4php/" threshold="all">
+	<appender name="default" class="LoggerAppenderDailyFile">
+		<layout class="LoggerLayoutPattern" >
+		    <param name="conversionPattern" value="%date{Y-m-d H:i:s} %logger %msg%n" />
+		</layout>
+		<param name="file" value="D:/wamp/www/log/tpssdb.%s.txt" />
+	</appender>
+
+	<appender name="dblog" class="LoggerAppenderDailyFile">
+		<layout class="LoggerLayoutPattern">
+		    <param name="conversionPattern" value="%date{Y-m-d H:i:s} %logger %msg%n" />
+        </layout>
+		<param name="file" value="D:/wamp/www/log/tpssdb.%s.txt" />
+	</appender>
+	
+
+    <logger name="db\PdoDB">
+		<level value="DEBUG" />
+        <appender_ref ref="dblog" />
+    </logger>
+
+	<root>
+		<level value="DEBUG" />
+		<appender_ref ref="default" />
+	</root>
+</log4php:configuration>

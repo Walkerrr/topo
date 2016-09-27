@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- easyui -->
+	<link rel="stylesheet" type="text/css" href="../jslib/jquery-easyui-1.4.2/themes/bootstrap/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../jslib/jquery-easyui-1.4.2/themes/icon.css" />
+	<link rel="stylesheet" type="text/css" href="../css/topodef.css">
+	<script type="text/javascript" src="../jslib/jquery-easyui-1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../jslib/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../js/topodef.js"></script>
+
+	<title>Main</title>
+</head>
+<body class="easyui-layout">
+	<div id="container">
+		<div id="left">
+			<h2>拓扑定义列表</h2>
+			<div id="list"><div id="datalist"></div></div>
+		</div>
+		<div id="right">
+			<h2>拓扑定义详情</h2>
+			<div id="data-detail">
+				<div id="options">
+					<p class="short">拓扑类型：<input type="text" id="topoType" class="text" placeholder="拓扑分类/取数字"></p>
+					<p class="short">拓扑描述：<input type="text" id="topoDescr" class="text" placeholder="具体拓扑的描述"></p>
+					<p class="short">拓扑级别：<input type="text" id="topoLevel"></p>
+					<p>图标显示类型：<input type="text" id="iconType"></p>
+					<p>链路显示类型：<input type="text" id="linkType"></p>
+					<p>节点聚合类型：<input type="text" id="nodeConvType"></p>
+					<p>链路聚合类型：<input type="text" id="linkConvType"></p>
+				</div>
+				<div id="buttons">
+					<a href="#" class="button" id="add">新增</a>
+					<a href="#" class="button" id="modify">修改</a>
+					<a href="#" class="button" id="delete">删除</a>
+					<a href="#" class="button" id="save">保存</a>
+					<a href="#" class="button" id="empty">清空</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div data-options="region:'south',title:'footer',split:true,noheader:true" style="height:100px;line-height:30px;text-align:center;height:35px;font-family:'Arial'">@2013-2016 Therfaint- .Powered by PHP and EasyUI.</div>
+</body>
+</html>

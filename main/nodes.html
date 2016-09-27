@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<!-- easyui -->
+	<link rel="stylesheet" type="text/css" href="../jslib/jquery-easyui-1.4.2/themes/bootstrap/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../jslib/jquery-easyui-1.4.2/themes/icon.css" />
+	<link rel="stylesheet" type="text/css" href="../css/nodes.css" />
+	<script type="text/javascript" src="../jslib/jquery-easyui-1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../jslib/jquery-easyui-1.4.2/jquery.placeholder-1.1.9.js"></script>
+	<script type="text/javascript" src="../jslib/jquery-easyui-1.4.2/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="../js/nodes.js"></script>
+	<script  type="text/javascript" src="../js/myregionselector.js"></script>
+
+	<title>Nodes</title>
+</head>
+<body class="easyui-layout">
+
+	<a id = "add-btn"></a>
+	<a id = "remove-btn"></a>
+	<div id="area_id" style="background:red;left:100px;top:50px"></div>
+
+	<div data-options="region:'north',title:'header',split:true,noheader:true" style="height:80px;background-color:#666">
+		<div class = "logo">拓扑节点管理</div>
+	</div>
+	<div data-options="region:'south',title:'footer',split:true,noheader:true" style="height:100px;line-height:30px;text-align:center;height:35px;font-family:'Arial'">@2013-2016 Therfaint- .Powered by PHP and EasyUI.</div>
+	<div data-options="region:'center'" style="padding:5px;background:#eee;overflow:hidden">
+		<div id = "container">
+			<p id = "tip">
+				拓扑描述：
+				<span id = "chosen-type"></span>
+			</p>
+			<hr>
+			<span class = "list left">
+				<p>
+					拓扑类型：
+					<input id = "topo-type"></p>
+				<p>
+				<ul id = "topo-def" style = "margin-left: 15px"></ul>
+			</span>
+			<span class = "list left" id = "special">
+				<div id = "nodes-title">
+					<p id = "title">所选拓扑节点</p>
+				</div>
+				<div id = "topo-nodes"></div>
+			</span>
+			<span class = "list right">
+				<div style = "height: 86px;font-family: consolas;font-size: 13px;">
+					<a id = "add-nodes-btn">点击我选择地区添加节点</a>
+					<p>
+						您所选择的是：
+						<span id = "province">*</span>
+						省
+						<span id = "city">*</span>
+						市
+					</p>
+				</div>
+				<div id = "nodes-list"></div>
+			</span>
+		</div>
+	</div>
+
+</body>
+</html>
